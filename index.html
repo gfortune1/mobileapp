@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-compatible" content="IE=edge">
@@ -9,7 +8,6 @@
     <title>Grocery list App</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-
 <body>
     <div class="container">
         <div class="box">
@@ -20,14 +18,73 @@
             </form>
         </div>
         <ol>
-            <li>Milk</li>
-            <li>Eggs</li>
-            <li>Coffee</li>
-            <li>Bread</li>
-            <li>Butter</li>
+           <li>Banana</li>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="card" style="width: 20rem;"> <img class="card-img-top" src="http://www.azspagirls.com/files/2010/09/orange.jpg" width="50px" alt="image cap">
+                            <div class="card-block">
+                                <h4 class="card-title">Orange</h4>
+                                <p class="card-text">Price: $0.5</p> <a href="#" data-name="Orange" data-price="0.5" class="add-to-cart btn btn-primary">Add to cart</a> </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card" style="width: 20rem;"> <img class="card-img-top" src="http://images.all-free-download.com/images/graphicthumb/vector_illustration_of_ripe_bananas_567893.jpg" width="50px" alt="Card image cap">
+                            <div class="card-block">
+                                <h4 class="card-title">Banana</h4>
+                                <p class="card-text">Price: $1.22</p> <a href="#" data-name="Banana" data-price="1.22" class="add-to-cart btn btn-primary">Add to cart</a> </div>
+                    </div>
+                    </div>
+                    <div class="col">
+                        <div class="card" style="width: 20rem;"> <img class="card-img-top" src="https://3.imimg.com/data3/IC/JO/MY-9839190/organic-lemon.jpg" width="50px" alt="Card image cap">
+                            <div class="card-block">
+                                <h4 class="card-title">Lemon</h4>
+                                <p class="card-text">Price: $5</p> <a href="#" data-name="Lemon" data-price="5" class="add-to-cart btn btn-primary">Add to cart</a> </div>
+                        </div>
+                    </div>
+                
+                    <div class="col">
+                        <div class="card" style="width: 20rem;"> <img class="card-img-top" src="https://th.bing.com/th?id=OIP.2ACfSUgJ4XqSrd_HJFFUXwHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" width="50px" alt="Card image cap">
+                            <div class="card-block">
+                                <h4 class="card-title">Milk</h4>
+                                <p class="card-text">Price: $5</p> <a href="#" data-name="Lemon" data-price="5" class="add-to-cart btn btn-primary">Add to cart</a> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
         </ol>
     </div>
     <script>
+import { Component } from '@angular/core'; 
+import { Geolocation } from 'ionic-native'; 
+import { Navcontroller } from 'ionic-angular';
+
+@Component ({
+selector: 'page-home', 
+templateUrl: 'home.hm]'
+})
+export class HomePage {
+
+coords: any;
+accuracy: any;
+error: any;
+
+constructor(pub
+lic navCtrl: NavController) {
+}
+
+watch() {
+Geolocation.getCurrentPosition() .then((resp) =› {
+this.coords = resp.coords.latitude +' '+ resp.coords. longitude;
+this.accuracy = resp.coords.accuracy + 'meters'
+})
+ }
+ }
+
+
         let grocery = document.getElementById('grocery');
         grocery.addEventListener('submit', addItem);
         function addItem(e){

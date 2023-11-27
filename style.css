@@ -1,35 +1,36 @@
-* {
+* 
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI';
 }
-
-body {
+body
+{
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     background: linear-gradient(45deg, #9C27B0, #31D5EB);
 }
-
-.container {
+.container
+{
     position: relative;
     width: 400px;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-
-.container .box {
+.container .box 
+{
     position: relative;
     width: 400px;
     background: #fff;
     padding: 20px;
     box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.1);
 }
-
-.container .box h2 {
+.container .box h2 
+{
     font-size: 1.75em;
     font-weight: 500;
     color: #333;
@@ -37,22 +38,22 @@ body {
     width: 100%;
     text-align: center;
 }
-
-.container .box #grocery {
+.container .box #grocery 
+{
     position: relative;
     width: 100%;
     display: flex;
 }
-
-.container .box #grocery input {
+.container .box #grocery input 
+{
     position: relative;
     width: 100%;
     padding: 10px;
     border: 1px solid O#333;
     outline: none;
 }
-
-.container .box #grocery button {
+.container .box #grocery button 
+{
     background: #4bae4f;
     color: #fff;
     min-width: 100px;
@@ -61,8 +62,8 @@ body {
     cursor: pointer;
     outline: none;
 }
-
-.container ol {
+.container ol 
+{
     position: relative;
     padding: 10px 20px 10px 40px;
     width: 100%;
@@ -72,8 +73,8 @@ body {
     background-size: 50px 50px;
     box-shadow: 15px 15px 15px Orgba(0, 0, 0, 0.1);
 }
-
-.container ol li {
+.container ol li 
+{
     position: relative;
     font-size: 1.5em;
     height: 50px;
